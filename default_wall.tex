@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+\usepackage[svgnames]{xcolor}
+\definecolor{ivory}{RGB}{255,255,240}
+
+\usepackage[font={color=ivory,sf},figurename=Fig.,labelfont={it}]{caption}
+
+\usepackage{color}
+
+\usepackage{tikz}
+
+\DeclareCaptionFont{green}{\color{green}}
+
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ left=20mm,
+ top=20mm,
+ bottom=20mm,   
+ }
+
+
+
+\graphicspath{{data/}}
+
+
+\begin{document}
+
+\tikz[remember picture, overlay] \node[opacity=1.0, inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{lb_bg.jpg}};
+
+% ROW 1
+\begin{figure}[!ht]%\centering
+    \begin{subfigure}{0.23\textwidth}
+        \includegraphics[width=\hsize]{test_card}
+        \caption*{Name11\\setlang11\\wp11}
+        \label{fig:bird-a}
+    \end{subfigure}
+\hfill%\hfil
+    \begin{subfigure}{0.23\textwidth}
+        \includegraphics[width=\hsize]{test_card}
+        \caption*{Name12\\setlang12\\wp12}
+        \label{fig:bird-a}
+\end{subfigure}
+\hfill%\hfil
+    \begin{subfigure}{0.23\textwidth}
+        \includegraphics[width=\hsize]{test_card}
+        \caption*{Name13\\setlang13\\wp13}
+        \label{fig:bird-a}
+\end{subfigure}
+\hfill%\hfil
+    \begin{subfigure}{0.23\textwidth}
+        \includegraphics[width=\hsize]{test_card}
+        \caption*{Name14\\setlang14\\wp14}
+        \label{fig:bird-a}
+\end{subfigure}
+\end{figure}
+
+\end{document}
